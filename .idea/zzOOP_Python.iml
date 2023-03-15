@@ -5,6 +5,11 @@
       <sourceFolder url="file://$MODULE_DIR$/Inheretance/food" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Inheretance/multilevel_inheritance" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Inheretance/multiple_inheretance" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Inheretance_exercise/need_for_speed/project" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Inheretance_exercise/person/project" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Inheretance_exercise/players_and_monsters/project" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Inheretance_exercise/zoo/project" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Encapsulation_exercise/wild_cat_zoo/project" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
     <orderEntry type="inheritedJdk" />
