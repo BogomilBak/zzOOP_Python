@@ -1,11 +1,11 @@
+import unittest
 from unittest import TestCase
-from Testing.test_worker import Worker
 
 
 class WorkerTests(TestCase):
     NAME = 'Test Worker'
     SALARY = 1024
-    ENERGY = 1
+    ENERGY = 2
 
     def setUp(self) -> None:
         self.worker = Worker(self.NAME, self.SALARY, self.ENERGY)
@@ -30,8 +30,9 @@ class WorkerTests(TestCase):
 
     def test__work_when_enough_energy__expect_money_to_be_increased_by_salary(self):
         self.worker.work()
+        self.worker.work()
 
-        self.assertEqual(self.SALARY, self.worker.money)
+        self.assertEqual(2 * self.SALARY, self.worker.money)
 
     def test__work_when_enough_energy__expect_energy_to_decrement(self):
         self.worker.work()
@@ -40,6 +41,10 @@ class WorkerTests(TestCase):
 
     def test__get_info__expect_correct_result(self):
         actual_info = self.worker.get_info()
-        expected_info = f'{self.NAME} has saved {self.worker.money} money.'
+        expected_info = f'{self.NAME} has saved {0} money.'
 
         self.assertEqual(expected_info, actual_info)
+
+
+if __name__ == '__main__':
+    unittest.main()
