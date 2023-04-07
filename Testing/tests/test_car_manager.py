@@ -10,12 +10,14 @@ class TestCar(TestCase):
     FUEL_CAPACITY = 60
     FUEL_AMOUNT = 0
 
-    def test_constructor__happy_case(self):
-        car = Car("Honda", "Civic", 7, 60)
+    def setUp(self) -> None:
+        self.car = Car(self.MAKE, self.MODEL, self.FUEL_CONSUMPTION, self.FUEL_CAPACITY)
 
-        self.assertEqual(self.MAKE, car.make)
-        # self.assertEqual(self.MODEL, car.model)
-        # self.assertEqual(self.FUEL_CONSUMPTION, car.fuel_consumption)
-        # self.assertEqual(self.FUEL_CAPACITY, car.fuel_capacity)
-        # self.assertEqual(self.FUEL_AMOUNT, car.fuel_amount)
+    def test_constructor__happy_case(self):
+
+        self.assertEqual(self.MAKE, self.car.make)
+        self.assertEqual(self.MODEL, self.car.model)
+        self.assertEqual(self.FUEL_CONSUMPTION, self.car.fuel_consumption)
+        self.assertEqual(self.FUEL_CAPACITY, self.car.fuel_capacity)
+        self.assertEqual(self.FUEL_AMOUNT, self.car.fuel_amount)
 

@@ -1,6 +1,6 @@
-import unittest
 from unittest import TestCase
 
+from Testing.list import IntegerList
 
 
 class TestIntegerList(TestCase):
