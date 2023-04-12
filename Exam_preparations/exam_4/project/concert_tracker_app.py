@@ -55,6 +55,7 @@ class ConcertTrackerApp:
         self.__validate_band_name_does_not_exist(band_name)
         musician = self.MUSICIAN_NAMES[musician_name]
         band = self.BAND_NAMES[band_name]
+        self.musicians.remove(musician)
         band.members.append(musician)
         return f"{musician_name} was added to {band_name}."
 
@@ -64,6 +65,7 @@ class ConcertTrackerApp:
         self.__validate_musician_is_a_member_of_band(band, musician_name)
         musician = self.MUSICIAN_NAMES[musician_name]
         band.members.remove(musician)
+        self.musicians.append(musician)
         return f"{musician_name} was removed from {band_name}."
 
     def start_concert(self, concert_place, band_name):
